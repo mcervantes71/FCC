@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Palindrome</title>
+    </head>
+    <body>
+        <h1>Palindrome</h1>
+        <div name="form">
+            <label for="input">Text</label>
+            <input type="text" id="input">
+            <button onclick="palindrome(document.getElementById('input').value);">Check</button>
+        </div>
+        <script>
+            function palindrome(text)
+            {
+                var new_text = text.split('').reverse().join();
+
+                if(text === new_text)
+                {
+                    alert('This is a palindrome');
+                }
+                else
+                {
+                    alert('This is NOT a palindrome');
+                }
+            }
+        </script>
+    </body>
+</html>
