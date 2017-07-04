@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Longest Word</title>
+    </head>
+    <body>
+        <h1>Longest Word</h1>
+        <div name="form">
+            <label for="input">Sentence</label>
+            <input type="text" id="input">
+            <button onclick="word(document.getElementById('input').value);">Check</button>
+        </div>
+        <script>
+            function word(str)
+            {
+                var max = 0;
+				var counter = 0;
+				str = str.split('');
+			  
+				for(var i=0; i<str.length; i++)
+				{
+					if(str[i] != " ")
+					{
+						counter++;
+						
+						if(counter >= max)
+							max = counter;
+					}
+					else 
+					{
+						counter = 0;
+					}
+				}
+			  
+				alert("The longest word has " + max + " characters");
+            }
+        </script>
+    </body>
+</html>

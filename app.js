@@ -1,12 +1,12 @@
 $(function(){
-   $('.list-group a').click(function(e) {
+   /*$('.list-group a').click(function(e) {
        e.preventDefault()
 
         $that = $(this);
         
         $that.parent().find('a').removeClass('active');
         $that.addClass('active');
-    });
+    });*/
 
     $("#basic").click(function(){
         $("#basic_list").slideToggle("slow");

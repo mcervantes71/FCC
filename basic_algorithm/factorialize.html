@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Factorialize</title>
+    </head>
+    <body>
+        <h1>Factorialize</h1>
+        <div name="form">
+            <label for="input">Numbre</label>
+            <input type="number" id="input">
+            <button onclick="word(document.getElementById('input').value);">Factorialize</button>
+        </div>
+        <script>
+            function word(num)
+            {
+				var total = 1;
+				
+				for(var i=1; i<=num; i++)
+				{
+					total *= i;
+				}
+			  
+				alert("The result is " + total);
+            }
+        </script>
+    </body>
+</html>
