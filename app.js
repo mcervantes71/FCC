@@ -1,13 +1,4 @@
 $(function(){
-   /*$('.list-group a').click(function(e) {
-       e.preventDefault()
-
-        $that = $(this);
-        
-        $that.parent().find('a').removeClass('active');
-        $that.addClass('active');
-    });*/
-
     $("#basic").click(function(){
         $("#basic_list").slideToggle("slow");
     });
@@ -26,5 +17,14 @@ $(function(){
 
     $("#advanced_p").click(function(){
         $("#advanced_projects").slideToggle("slow");
+    });
+
+    $('.list-group .list-group-item-info').click(function(e) {
+        e.preventDefault()
+
+        $that = $(this);
+       
+        $that.parent().find('a').removeClass('active');
+        $that.addClass('active');
     });
 });
