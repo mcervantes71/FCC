@@ -11,11 +11,11 @@
             <button onclick="palindrome(document.getElementById('input').value);">Check</button>
         </div>
         <script>
-            function palindrome(text)
+            function palindrome(word)
             {
-                var new_text = text.split('').reverse().join();
+                var new_word = word.split('').reverse().join();
 
-                if(text === new_text)
+                if(word === new_word)
                 {
                     alert('This is a palindrome');
                 }
