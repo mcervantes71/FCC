@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Capitalize Word</title>
+        <title>Capitalize Words</title>
     </head>
     <body>
-        <h1>Capitalize Word</h1>
+        <h1>Capitalize Words</h1>
         <div name="form">
             <label for="input">Sentence</label>
             <input type="text" id="input">
-            <button onclick="Cap_Sentence(document.getElementById('input').value);">Capitalize</button>
+            <button onclick="cap_sentence(document.getElementById('input').value);">Capitalize</button>
         </div>
         <script>
-            function Cap_Sentence(sentence)
+            function cap_sentence(sentence)
             {
                 sentence = sentence.toLowerCase().split(' ');
 

@@ -8,10 +8,10 @@
         <div name="form">
             <label for="input">Sentence</label>
             <input type="text" id="input">
-            <button onclick="word(document.getElementById('input').value);">Check</button>
+            <button onclick="check_words(document.getElementById('input').value);">Check</button>
         </div>
         <script>
-            function word(sentence)
+            function check_words(sentence)
             {
                 var max = 0;
 				var counter = 0;
