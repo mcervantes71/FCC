@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Truncate string</title>
+    </head>
+    <body>
+        <h1>Truncate string</h1>
+        <div name="form">
+            <label for="input">Text</label>
+            <input type="text" id="input1">
+            <br>
+            <label for="number">Number</label>
+            <input type="number" id="input2">
+            <br>
+            <button onclick="truncate_string(document.getElementById('input1').value,document.getElementById('input2').value);">Truncate</button>
+        </div>
+        <script>
+            function truncate_string(str, num)
+            {
+                if(num <= 3)
+                    str = str.slice(0, num) + "...";
+                else if(num < str.length)
+                    str = str.slice(0, num-3) + "...";
+			  
+				alert("The result is " + str);
+            }
+        </script>
+    </body>
+</html>
