@@ -1,35 +1,9 @@
 $(function(){
-    $("#basic").click(function(){
+    $(".list-group > a").click(function(){
         $(".active").next().slideToggle("slow");
-        $("#basic_list").slideToggle("slow");
-    });
+        $(".active").removeClass("active");
 
-    $("#inter").click(function(){
-        $(".active").next().slideToggle("slow");
-        $("#inter_list").slideToggle("slow");
-    });
-
-    $("#advanced").click(function(){
-        $(".active").next().slideToggle("slow");
-        $("#advanced_list").slideToggle("slow");
-    });
-
-    $("#inter_p").click(function(){
-        $(".active").next().slideToggle("slow");
-        $("#inter_projects").slideToggle("slow");
-    });
-
-    $("#advanced_p").click(function(){
-        $(".active").next().slideToggle("slow");
-        $("#advanced_projects").slideToggle("slow");
-    });
-
-    $('.list-group .list-group-item-info').click(function(e) {
-        e.preventDefault()
-
-        $that = $(this);
-       
-        $that.parent().find('a').removeClass('active');
-        $that.addClass('active');
+        $(this).addClass("active");
+        $(this).next().slideToggle("slow");
     });
 });

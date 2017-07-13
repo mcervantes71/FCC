@@ -1,19 +1,7 @@
-/*#basic_list{
-    display:none;
-}*/
-
-#inter_list{
+.list-group > div{
     display:none;
 }
 
-#advanced_list{
-    display:none;
-}
-
-#inter_projects{
-    display:none;
-}
-
-#advanced_projects{
-    display:none;
+#basic_list{
+    display:inline;
 }
