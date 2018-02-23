@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sum All Numbers in a Range</title>
+    </head>
+    <body>
+        <h1>Sum All Numbers in a Range</h1>
+        <div name="form">
+            <label for="input">First Number</label>
+            <input id="num1" type="number" />
+            <label for="input">Second Number</label>
+            <input id="num2" type="number" />
+            <button onclick="sum(document.getElementById('num1').value, document.getElementById('num2').value);">Sum</button>
+        </div>
+        <script>
+                    
+function sumAll(arr)
+{
+    var suma = 0;
+  
+    if(arr[0] > arr[1])
+    {
+        for(var i=arr[1]; i<=arr[0]; i++)
+        {
+            suma += i;
+        }
+    }
+    else
+    {
+        for(var j=arr[0]; j<=arr[1]; j++)
+        {
+            suma += j;
+        }
+    }
+    alert(suma);
+}
+        </script>
+    </body>
+</html>
