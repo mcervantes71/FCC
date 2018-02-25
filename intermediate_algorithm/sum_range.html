@@ -2,6 +2,11 @@
 <html>
     <head>
         <title>Sum All Numbers in a Range</title>
+        <style>
+            input{
+                display: block;
+            }
+        </style>
     </head>
     <body>
         <h1>Sum All Numbers in a Range</h1>
@@ -10,30 +15,31 @@
             <input id="num1" type="number" />
             <label for="input">Second Number</label>
             <input id="num2" type="number" />
-            <button onclick="sum(document.getElementById('num1').value, document.getElementById('num2').value);">Sum</button>
+            <button onclick="sumRange(document.getElementById('num1').value, document.getElementById('num2').value);">Sum</button>
         </div>
         <script>
-                    
-function sumAll(arr)
-{
-    var suma = 0;
-  
-    if(arr[0] > arr[1])
-    {
-        for(var i=arr[1]; i<=arr[0]; i++)
-        {
-            suma += i;
-        }
-    }
-    else
-    {
-        for(var j=arr[0]; j<=arr[1]; j++)
-        {
-            suma += j;
-        }
-    }
-    alert(suma);
-}
+            function sumRange(num1, num2)
+            {
+                var suma = 0;
+                var n1 = parseInt(num1);
+                var n2 = parseInt(num2);
+
+                if(n1 < n2)
+                {
+                    for(var i=n1; i<=n2; i++)
+                    {
+                        suma += parseInt(i);
+                    }
+                }
+                else
+                {
+                    for(var j=n2; j<=n1; j++)
+                    {
+                        suma += parseInt(j);
+                    }
+                }
+                alert("The sum is " + suma);
+            }
         </script>
     </body>
 </html>
