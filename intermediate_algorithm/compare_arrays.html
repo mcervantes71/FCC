@@ -5,30 +5,18 @@
     </head>
     <body>
         <h1>Compare Arrays</h1>
+	<input id="clickMe" type="button" value="clickme" onclick="diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);" />
         <script>
             function diffArray(arr1, arr2)
             {
-                var newArr = [];
-                var diff = true;
-
-                for(var i = 0; i < arr1.length; i++)
-                {
-                    for(var j = 0; j < arr2.length; j++)
-                    {
-                        if(arr1[i] == arr2[j])
-                        {
-                            diff == false;
-                        }
-                    }
-                    if(diif == true)
-                        newArr.push(arr1[i]);
-                }
+                var newArr = arr1
+                .concat(arr2)
+                .filter(
+                    item => !arr1.includes(item) || !arr2.includes(item)
+                )
 
                 console.log(newArr);
-                alert(newArr);
             }
-
-            diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
         </script>
     </body>
 </html>
