@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Celsius to Fahrenheit</title>
+    </head>
+    <body>
+        <h1>Celsius to Fahrenheit</h1>
+        <p>
+            Check the result in the console.
+        </p>
+        <div name="form">
+            <label for="input">Celsius</label>
+            <input type="number" id="input">
+            <button onclick="convertToF(document.getElementById('input').value);">Convert</button>
+        </div>
+        <script>
+            function convertToF(celsius) {
+              var fahrenheit = celsius * 9 / 5 + 32;
+              console.log(celsius+'℃ --> '+fahrenheit+"℉");
+            }
+
+            convertToF(-30);
+            convertToF(-10);
+            convertToF(0);
+            convertToF(20);
+            convertToF(30);
+        </script>
+    </body>
+</html>
+﻿
