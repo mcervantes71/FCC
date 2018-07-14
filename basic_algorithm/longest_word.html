@@ -11,29 +11,30 @@
             <button onclick="check_words(document.getElementById('input').value);">Check</button>
         </div>
         <script>
-            function check_words(sentence)
-            {
-                var max = 0;
-				var counter = 0;
-				sentence = sentence.split('');
-			  
-				for(var i=0; i<sentence.length; i++)
-				{
-					if(sentence[i] != " ")
-					{
-						counter++;
-						
-						if(counter >= max)
-							max = counter;
-					}
-					else 
-					{
-						counter = 0;
-					}
-				}
-			  
-				alert("The longest word has " + max + " characters");
+            function findLongestWordLength(str) {
+                var longest = 1;
+                var counter = 0;
+                str = str.split('');
+
+                for(var i = 0; i < str.length; i++){
+                    if(str[i] != " ")
+                        counter++;
+                    else
+                        counter = 0;
+
+                    if(counter > longest)
+                        longest = counter;
+                }
+                console.log(str.join(''));
+                console.log("Longest word = " + longest);
             }
+
+            findLongestWordLength("The quick brown fox jumped over the lazy dog");
+            findLongestWordLength("The quick brown fox jumped over the lazy dog");
+            findLongestWordLength("May the force be with you");
+            findLongestWordLength("Google do a barrel roll");
+            findLongestWordLength("What is the average airspeed velocity of an unladen swallow");
+            findLongestWordLength("What if we try a super-long word such as otorhinolaryngology");
         </script>
     </body>
 </html>

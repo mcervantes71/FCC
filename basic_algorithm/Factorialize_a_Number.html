@@ -11,17 +11,20 @@
             <button onclick="factorialize(document.getElementById('input').value);">Factorialize</button>
         </div>
         <script>
-            function factorialize(num)
-            {
-				var total = 1;
-				
-				for(var i=1; i<=num; i++)
-				{
-					total *= i;
-				}
-			  
-				alert("The result is " + total);
-            }
+        function factorialize(num) {
+          var factorial = 1;
+
+          for(var i = 1; i <= num; i++){
+            factorial *= i;
+          }
+
+          console.log(num + "! = " + factorial);
+        }
+
+        factorialize(5);
+        factorialize(10);
+        factorialize(20);
+        factorialize(0);
         </script>
     </body>
 </html>
