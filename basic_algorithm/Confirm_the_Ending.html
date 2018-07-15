@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Confirm the Ending</title>
+    </head>
+    <body>
+        <h1>Confirm the Ending</h1>
+        <div name="form">
+            <label for="input">Word(s)</label>
+            <input type="text" id="input1" />
+            <input type="text" id="input2" />
+            <button onclick="confirmEnding(document.getElementById('input1').value, document.getElementById('input2').value);">Check</button>
+        </div>
+        <script>
+            function confirmEnding(str, target) {
+                str = str.split('');
+                target = target.split('');
+
+                var i = str.length - 1;
+                var j = target.length - 1;
+                var limit = i - j;
+
+                for(i;i >= limit; i--){
+                    if(str[i] != target[j])
+                        return false;
+
+                    j--;
+                }
+
+                return true;
+            }
+
+
+
+
+
+            confirmEnding("Bastian", "n");
+            confirmEnding("Congratulation", "on") //should return true.
+            confirmEnding("Connor", "n") //should return false.
+            confirmEnding("Walking on water and developing software from a specification are easy if both are frozen", "specification") //should return false.
+            confirmEnding("He has to give me a new name", "name") //should return true.
+            confirmEnding("Open sesame", "same") //should return true.
+            confirmEnding("Open sesame", "pen") //should return false.
+            confirmEnding("Open sesame", "game") //should return false.
+            confirmEnding("If you want to save our world, you must hurry. We dont know how much longer we can withstand the nothing", "mountain") //should return false.
+            confirmEnding("Abstraction", "action") //should return true.
+        </script>
