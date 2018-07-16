@@ -8,6 +8,7 @@
         <div name="form">
             <label for="input">Word(s)</label>
             <input type="text" id="input1" />
+            <label for="input">Target</label>
             <input type="text" id="input2" />
             <button onclick="confirmEnding(document.getElementById('input1').value, document.getElementById('input2').value);">Check</button>
         </div>
@@ -22,17 +23,13 @@
 
                 for(i;i >= limit; i--){
                     if(str[i] != target[j])
-                        return false;
+                        console.log(false);
 
                     j--;
                 }
 
-                return true;
+                console.log(true);
             }
-
-
-
-
 
             confirmEnding("Bastian", "n");
             confirmEnding("Congratulation", "on") //should return true.
@@ -45,3 +42,5 @@
             confirmEnding("If you want to save our world, you must hurry. We dont know how much longer we can withstand the nothing", "mountain") //should return false.
             confirmEnding("Abstraction", "action") //should return true.
         </script>
+    </body>
+</html>

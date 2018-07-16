@@ -15,15 +15,27 @@
             <button onclick="truncate_string(document.getElementById('input1').value,document.getElementById('input2').value);">Truncate</button>
         </div>
         <script>
-            function truncate_string(str, num)
-            {
-                if(num <= 3)
-                    str = str.slice(0, num) + "...";
-                else if(num < str.length)
-                    str = str.slice(0, num-3) + "...";
-			  
-				alert("The result is " + str);
-            }
+        function truncateString(str, num) {
+            let newString = [];
+            str = str.split('');
+
+            if(num >= str.length)
+                return str.join('');
+
+            for(var i = 0; i < num; i++)
+                newString.push(str[i]);
+
+            newString = newString.join('') +"...";
+
+            consolog.log(newString);
+        }
+
+        truncateString("A-tisket a-tasket A green and yellow basket", 8) //should return "A-tisket...".
+        truncateString("Peter Piper picked a peck of pickled peppers", 11) //should return "Peter Piper...".
+        truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length) //should return "A-tisket a-tasket A green and yellow basket".
+        truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length + 2) //should return "A-tisket a-tasket A green and yellow basket".
+        truncateString("A-", 1) //should return "A...".
+        truncateString("Absolutely Longer", 2) //should return "Ab...".
         </script>
     </body>
 </html>

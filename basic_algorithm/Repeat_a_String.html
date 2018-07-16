@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Repeat a String</title>
+    </head>
+    <body>
+        <h1>Repeat a String</h1>
+        <div name="form">
+            <label for="input">Word(s)</label>
+            <input type="text" id="input1" />
+            <label for="input">Number of Times</label>
+            <input type="number" id="input2" />
+            <button onclick="confirmEnding(document.getElementById('input1').value, document.getElementById('input2').value);">Check</button>
+        </div>
+        <script>
+            ﻿function repeatStringNumTimes(str, num) {
+                let repeat = "";
+
+                if(num < 1)
+                    return repeat;
+                else
+                    for(var i = 1; i <= num; i++){
+                        repeat += str;
+                    }
+
+                console.log(repeat);
+            }
+
+            repeatStringNumTimes("*", 3)// should return "***".
+            repeatStringNumTimes("abc", 3) //should return "abcabcabc".
+            repeatStringNumTimes("abc", 4) //should return "abcabcabcabc".
+            repeatStringNumTimes("abc", 1) //should return "abc".
+            repeatStringNumTimes("*", 8) //should return "********".
+            repeatStringNumTimes("abc", -2) //should return "".
+        </script>
+    </body>
+</html>
