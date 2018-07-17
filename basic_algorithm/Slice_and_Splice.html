@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Slice and Splice</title>
+    </head>
+    <body>
+        <h1>Slice and Splice</h1>
+        <div name="form">
+            <label for="input">Slice and Splice</label>
+            <input type="text" id="input" placeholder="[1, 2, 3], [4, 5], 1" disabled>
+            <button onclick="frankenSplice([1, 2, 3], [4, 5], 1);">Check</button>
+        </div>
+        <script>
+            function frankenSplice(arr1, arr2, n) {
+              let newArray = arr2.slice()
+              newArray.splice(n,0,...arr1)
+              return newArray
+            }
+
+            frankenSplice([1, 2, 3], [4, 5], 1) //should return [4, 1, 2, 3, 5].
+            frankenSplice([1, 2], ["a", "b"], 1) //should return ["a", 1, 2, "b"].
+            frankenSplice(["claw", "tentacle"], ["head", "shoulders", "knees", "toes"], 2) //should return ["head", "shoulders", "claw", "tentacle", "knees", "toes"].
+
+            alert("check results in console");
+        </script>
+    </body>
+</html>
+﻿

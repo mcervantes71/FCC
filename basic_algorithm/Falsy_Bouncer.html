@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Falsy Bouncer</title>
+    </head>
+    <body>
+        <h1>Falsy Bouncer</h1>
+        <div name="form">
+            <label for="input">Falsy Bouncer</label>
+            <input type="text" id="input" placeholder="[7, "ate", "", false, 9]" disabled>
+            <button onclick="check_array([7, "ate", "", false, 9]);">Check</button>
+        </div>
+        <script>
+            function bouncer(arr) {
+                  for(var i = 0; i < arr.length; i++)
+                    if(arr[i] === false || arr[i] === null || arr[i] === 0 || arr[i] === "" || arr[i] === undefined || arr[i] === NaN){
+                        arr.splice(i,1);
+                        i--;
+                    }
+
+                return arr;
+            }
+
+            bouncer([7, "ate", "", false, 9]) //should return [7, "ate", 9].
+            bouncer(["a", "b", "c"]) //should return ["a", "b", "c"].
+            bouncer([false, null, 0, NaN, undefined, ""]) //should return [].
+            bouncer([1, null, NaN, 2, undefined]) //should return [1, 2].([[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -17, -10]]) //should return [25, 48, 21, -3]
+
+            alert("check results in console");
+        </script>
+    </body>
+</html>
