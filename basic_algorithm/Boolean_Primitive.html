@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Boolena Checker</title>
+    </head>
+    <body>
+        <h1>Boolena Checker</h1>
+        <div name="form">
+            <label for="input">Valor</label>
+            <input type="text" id="input">
+            <button onclick="booWho(document.getElementById('input').value);">Check</button>
+        </div>
+        <script>
+            function booWho(bool) {
+                if(bool === true || bool === false)
+                    return true;
+                else
+                    return false;
+            }
+
+            booWho(true) //should return true.
+            booWho(false) //should return true.
+            booWho([1, 2, 3]) //should return false.
+            booWho([].slice) //should return false.
+            booWho({ "a": 1 }) //should return false.
+            booWho(1) //should return false.
+            booWho(NaN) //should return false.
+            booWho("a") //should return false.
+            booWho("true") //should return false.
+            booWho("false") //should return false.
+
+            alert("check results in console");
+        </script>
+    </body>
+</html>

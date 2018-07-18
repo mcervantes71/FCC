@@ -10,7 +10,7 @@
             <input type="text" id="input1" />
             <label for="input">Number of Times</label>
             <input type="number" id="input2" />
-            <button onclick="confirmEnding(document.getElementById('input1').value, document.getElementById('input2').value);">Check</button>
+            <button onclick="repeatStringNumTimes(document.getElementById('input1').value, document.getElementById('input2').value);">Check</button>
         </div>
         <script>
             ﻿function repeatStringNumTimes(str, num) {
@@ -32,6 +32,8 @@
             repeatStringNumTimes("abc", 1) //should return "abc".
             repeatStringNumTimes("*", 8) //should return "********".
             repeatStringNumTimes("abc", -2) //should return "".
+
+            alert("check results in console");
         </script>
     </body>
 </html>
