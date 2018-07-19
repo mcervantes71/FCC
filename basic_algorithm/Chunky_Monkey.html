@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chunky Monkey</title>
+    </head>
+    <body>
+        <h1>Chunky Monkey</h1>
+        <div name="form">
+            <label for="input">Number</label>
+            <input type="text" id="input" placeholder="["a", "b", "c", "d"], 2" disabled>
+            <button onclick="chunkArrayInGroups(["a", "b", "c", "d"], 2)">Check</button>
+        </div>
+        <script>
+            function chunkArrayInGroups(arr, size) {
+                var masterArr = [];
+                var item = 0;
+
+                while(item < arr.length) {
+                    masterArr.push(arr.slice(item, item += size));
+                }
+                console.log(masterArr);
+            }
+
+            chunkArrayInGroups(["a", "b", "c", "d"], 2) //should return [["a", "b"], ["c", "d"]].
+            chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3) //should return [[0, 1, 2], [3, 4, 5]].
+            chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2) //should return [[0, 1], [2, 3], [4, 5]].
+            chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4) //should return [[0, 1, 2, 3], [4, 5]].
+            chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 3) //should return [[0, 1, 2], [3, 4, 5], [6]].
+            chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4) //should return [[0, 1, 2, 3], [4, 5, 6, 7], [8]].
+            chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 2) //should return [[0, 1], [2, 3], [4, 5], [6, 7], [8]].
+
+            alert("check results in console");
+        </script>
+    </body>
+</html>

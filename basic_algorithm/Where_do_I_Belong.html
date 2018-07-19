@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chunky Monkey</title>
+    </head>
+    <body>
+        <h1>Chunky Monkey</h1>
+        <div name="form">
+            <label for="input">Number</label>
+            <input type="text" id="input" placeholder="[40, 60], 50" disabled>
+            <button onclick="getIndexToIns([40, 60], 50)">Check</button>
+        </div>
+        <script>
+            function getIndexToIns(arr, num) {
+                arr.push(num);
+                arr.sort(function(a, b){return a-b});
+                console.log(arr.indexOf(num));
+            }
+
+            getIndexToIns([40, 60], 50);
+            getIndexToIns([10, 20, 30, 40, 50], 35) //should return 3.
+            getIndexToIns([10, 20, 30, 40, 50], 35) //should return a number.
+            getIndexToIns([10, 20, 30, 40, 50], 30) //should return 2.
+            getIndexToIns([10, 20, 30, 40, 50], 30) //should return a number.
+            getIndexToIns([40, 60], 50) //should return 1.
+            getIndexToIns([40, 60], 50) //should return a number.
+            getIndexToIns([3, 10, 5], 3) //should return 0.
+            getIndexToIns([3, 10, 5], 3) //should return a number.
+            getIndexToIns([5, 3, 20, 3], 5) //should return 2.
+            getIndexToIns([5, 3, 20, 3], 5) //should return a number.
+            getIndexToIns([2, 20, 10], 19) //should return 2.
+            getIndexToIns([2, 20, 10], 19) //should return a number.
+            getIndexToIns([2, 5, 10], 15) //should return 3.
+            getIndexToIns([2, 5, 10], 15) //should return a number.
+            getIndexToIns([], 1) //should return 0.
+            getIndexToIns([], 1) //should return a number.
+
+            alert("check results in console");
+        </script>
+    </body>
+</html>
