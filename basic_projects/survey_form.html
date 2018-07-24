@@ -18,14 +18,29 @@
                 text-align: center;
             }
 
+            .table {
+                width: 70%;
+            }
+
+            td {
+                padding: 5px 10px;
+            }
+
             .left-column {
-                width: 49%;
-                display: inline;
+                width: 40%;
             }
 
             .right-column {
-                width: 49%;
-                display: inline;
+                width: 40%;
+            }
+
+            .right-column > label {
+                text-align: left;
+            }
+
+            label {
+                display: block;
+                text-align: right;
             }
 
             input[type="submit"] {
@@ -44,94 +59,100 @@
         <div class="container">
             <p id="description">Let us know how we can improve freeCodeCamp</p>
             <form id="survey-form">
-                <div class="form-group">
-                    <div class="left-column">
-                        <label id="name-label" for="name">*Nombre</label>
-                    </div>
-                    <div class="right-column">
-                        <input type="text" id="name" name="name" placeholder="Enter your name" required />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="left-column">
-                        <label id="email-label" for="email">*Email</label>
-                    </div>
-                    <div class="right-column">
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="left-column">
-                        <label id="number" for="age">*Age</label>
-                    </div>
-                    <div class="right-column">
-                        <input type="number" id="number" name="age" placeholder="Age" required />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="left-column">
-                        <label id="role" for="role">Which option best describe your current role?</label>
-                    </div>
-                    <div class="right-column">
-                        <select id="dropdown" name="role">
-                            <option name="field" value="1">Student</option>
-                            <option name="field" value="2">Full Time Job</option>
-                            <option name="field" value="3">Full Time Learner</option>
-                            <option name="field" value="4">Prefer not to say</option>
-                            <option name="field" value="5">Other</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="left-column">
-                        <label id="recommend" for="recommend">*How likely is that you would recommend freeCodeCamp to a friend?</label>
-                    </div>
-                    <div class="right-column">
-                        <input type="radio" id="recommend" name="recommend" value="1" required /> Definitely
-                        <input type="radio" id="recommend" name="recommend" value="2" /> Maybe
-                        <input type="radio" id="recommend" name="recommend" value="3" /> Not sure
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="left-column">
-                        <label id="like" for="like">What do you like most in FCC:</label>
-                    </div>
-                    <div class="right-column">
-                        <select id="dropdown" name="like">
-                            <option name="field" value="1">Challenges</option>
-                            <option name="field" value="2">Projects</option>
-                            <option name="field" value="3">Community</option>
-                            <option name="field" value="4">Open Source</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="left-column">
-                        <label id="improvement" for="improvement">Things that should be improved in the future (Check all that apply):</label>
-                    </div>
-                    <div class="right-column">
-                        <input type="checkbox" id="improvement" name="improvement" value="1" /> Front-end Projects
-                        <input type="checkbox" id="improvement" name="improvement" value="2" /> Back-end Projects
-                        <input type="checkbox" id="improvement" name="improvement" value="3" /> Data Visualization
-                        <input type="checkbox" id="improvement" name="improvement" value="4" /> Challenges
-                        <input type="checkbox" id="improvement" name="improvement" value="5" /> Open Source Community
-                        <input type="checkbox" id="improvement" name="improvement" value="6" /> Gitter help rooms
-                        <input type="checkbox" id="improvement" name="improvement" value="7" /> Videos
-                        <input type="checkbox" id="improvement" name="improvement" value="8" /> City Meetups
-                        <input type="checkbox" id="improvement" name="improvement" value="9" /> Wiki
-                        <input type="checkbox" id="improvement" name="improvement" value="10" /> Forum
-                        <input type="checkbox" id="improvement" name="improvement" value="11" /> Additional Courses
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="left-column">
-                        <label id="comment" for="comment">Any Comment or Suggestion?</label>
-                    </div>
-                    <div class="right-column">
-                        <textarea id="comment" name="comment" rows="5" cols="30" placeholder="Enter your comment here..."></textarea>
-                    </div>
-                </div>
-                <input type="submit" id="Submit" value="Submit"/>
+                <table>
+                    <tr class="form-group">
+                        <td class="left-column">
+                            <label id="name-label" for="name">*Nombre</label>
+                        </td>
+                        <td class="right-column">
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required />
+                        </td>
+                    </tr>
+                    <tr class="form-group">
+                        <td class="left-column">
+                            <label id="email-label" for="email">*Email</label>
+                        </td>
+                        <td class="right-column">
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required />
+                        </td>
+                    </tr>
+                    <tr class="form-group">
+                        <td class="left-column">
+                            <label id="number" for="age">*Age</label>
+                        </td>
+                        <td class="right-column">
+                            <input type="number" id="number" name="age" placeholder="Age" required />
+                        </td>
+                    </tr>
+                    <tr class="form-group">
+                        <td class="left-column">
+                            <label id="role" for="role">Which option best describe your current role?</label>
+                        </td>
+                        <td class="right-column">
+                            <select id="dropdown" name="role">
+                                <option name="field" value="1">Student</option>
+                                <option name="field" value="2">Full Time Job</option>
+                                <option name="field" value="3">Full Time Learner</option>
+                                <option name="field" value="4">Prefer not to say</option>
+                                <option name="field" value="5">Other</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr class="form-group">
+                        <td class="left-column">
+                            <label id="recommend" for="recommend">*How likely is that you would recommend freeCodeCamp to a friend?</label>
+                        </td>
+                        <td class="right-column">
+                            <label><input type="radio" id="recommend" name="recommend" value="1" required /> Definitely</label>
+                            <label><input type="radio" id="recommend" name="recommend" value="2" /> Maybe</label>
+                            <label><input type="radio" id="recommend" name="recommend" value="3" /> Not sure</label>
+                        </td>
+                    </tr>
+                    <tr class="form-group">
+                        <td class="left-column">
+                            <label id="like" for="like">What do you like most in FCC:</label>
+                        </td>
+                        <td class="right-column">
+                            <select id="dropdown" name="like">
+                                <option name="field" value="1">Challenges</option>
+                                <option name="field" value="2">Projects</option>
+                                <option name="field" value="3">Community</option>
+                                <option name="field" value="4">Open Source</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr class="form-group">
+                        <td class="left-column">
+                            <label id="improvement" for="improvement">Things that should be improved in the future (Check all that apply):</label>
+                        </td>
+                        <td class="right-column">
+                            <label><input type="checkbox" id="improvement" name="improvement" value="1" /> Front-end Projects</label>
+                            <label><input type="checkbox" id="improvement" name="improvement" value="2" /> Back-end Projects</label>
+                            <label><input type="checkbox" id="improvement" name="improvement" value="3" /> Data Visualization</label>
+                            <label><input type="checkbox" id="improvement" name="improvement" value="4" /> Challenges</label>
+                            <label><input type="checkbox" id="improvement" name="improvement" value="5" /> Open Source Community</label>
+                            <label><input type="checkbox" id="improvement" name="improvement" value="6" /> Gitter help rooms</label>
+                            <label><input type="checkbox" id="improvement" name="improvement" value="7" /> Videos</label>
+                            <label><input type="checkbox" id="improvement" name="improvement" value="8" /> City Meetups</label>
+                            <label><input type="checkbox" id="improvement" name="improvement" value="9" /> Wiki</label>
+                            <label><input type="checkbox" id="improvement" name="improvement" value="10" /> Forum</label>
+                            <label><input type="checkbox" id="improvement" name="improvement" value="11" /> Additional Courses</label>
+                        </td>
+                    </tr>
+                    <tr class="form-group">
+                        <td class="left-column">
+                            <label id="comment" for="comment">Any Comment or Suggestion?</label>
+                        </td>
+                        <td class="right-column">
+                            <textarea id="comment" name="comment" rows="5" cols="30" placeholder="Enter your comment here..."></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" id="Submit" value="Submit"/>
+                        </td>
+                    </tr>
+                </table>
             </form>
         </div>
     </body>
