@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Product Landing Page</title>
+
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <style>
+            .main {
+                font-weight: bolder;
+                text-decoration: underline;
+            }
+
+            .copy-left {
+                display: inline-block;
+                text-align: right;
+                margin: 0px;
+                -moz-transform: scaleX(-1);
+                -o-transform: scaleX(-1);
+                -webkit-transform: scaleX(-1);
+                transform: scaleX(-1);
+                filter: FlipH;
+                -ms-filter: “FlipH”;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header id="header">
+                <nav id="nav-bar" class="navbar fixed-top navbar-expand-md bg-dark navbar-dark">
+                    <a class="navbar-brand" href="#"><img id="header-img" src="https://i1.wp.com/freepngimages.com/wp-content/uploads/2015/12/pile-of-books-transparent-image.png?fit=377%2C413" alt="Heart Typing" height="30px"></a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="collapseNavbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Pricing">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <a id="Home">
+            <br>
+            <br>
+            <br>
+            <div>
+                <div class="row">
+                  <h1 class="main display-1 m-auto py-5">Brainfuck</h1>
+                </div>
+                <div class="row">
+                    <p>
+                        Is the most famous esoteric programming language, and has inspired the creation of a host of other languages. Due to the fact that the last half of its name is often considered one of the most offensive words in the English language, it is sometimes referred to as brainf***, brainf*ck, brainfsck, b****fuck, brainf**k, branflakes, or BF. This can make it a bit difficult to search for information regarding brainfuck on the web, as the proper name might not be used at all in some articles.
+                    </p>
+                    <div class="embed-responsive embed-responsive-21by9">
+          <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/2zs02O0OPh8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+                </div>
+            </div>
+
+            <div id="Pricing" class="row p-3 py-5 bg-light">
+                <div class="col-lg-4 p-2">
+                    <h1 class="display-1">Pricing</h1>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card text-center">
+                        <div class="card-header bg-primary text-white">
+                            <h1>Standard</h1>
+                        </div>
+
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Standar Course</li>
+                                <li class="list-group-item">Standar Lessons</li>
+                                <li class="list-group-item">Standar Tasks</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <h1>$15.<sup>99</sup><sub class="text-muted">/mo</sub></h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card text-center">
+                        <div class="card-header bg-primary text-white">
+                            <h1>Premium</h1>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Custom Course</li>
+                                <li class="list-group-item">Custom Lessons</li>
+                                <li class="list-group-item">Custom Tasks</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <h1>$25.<sup>99</sup><sub class="text-muted">/mo</sub></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Contact" class="row p-3 py-5 bg-secondary">
+                <div class="col-md-7">
+                    <h1 class="display-1">Contact us</h1>
+                </div>
+                <div class="col-md-5">
+
+                    <form id="form" action="https://www.freecodecamp.com/email-submit" method="post">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter your email">
+                        </div>
+
+                        <input type="submit" id="submit" class="btn btn-primary" value="Submit">
+                    </form>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <footer>
+                <div class="fixed-bottom bg-info text-center py-3">
+                    <span class=”copy-left”>&copy;</span> 2018 Copyleft Martin Cervantes
+                </div>
+            </footer>
+            
+            <script src="js/jquery.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/popper.min.js"></script>
+            <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+        </div>
+    </body>
+</html>
